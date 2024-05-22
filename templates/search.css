@@ -1,12 +1,51 @@
+
+body
+{
+    position : relative;
+    width: 100%;
+    height: 100%;
+}
+
 #left
 {
-    border : 10px solid;
+    border : 1px solid;
+    flex : 1;
+    text-align: center;
+   
 }
 #middle
 {
-    border : 10px solid;
+    border : 1px solid;
+    flex : 1;
+    text-align: center;
 }
 #right
 {
-    border : 10px solid;
+    border : 1px solid;
+    flex : 1;
+    text-align: center;
+}
+
+nav_Container
+{
+    background-color : red;
+    display: flex;
+    width: 100%;
+    height : 5%;
+    overflow: hidden;
+   position: relative;
+}
+
+nav_Container img
+{   
+
+    object-fit: contain;
+    height: 70%;
+}
+
+#nav_text
+{
+    position: absolute;
+    height: 100%;
+    text-align: center;
 }
