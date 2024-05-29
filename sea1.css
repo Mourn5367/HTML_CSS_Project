@@ -1,0 +1,141 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    place-items: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "l s s r"
+        "l t t r"
+        "n n n n";
+}
+.left_side
+{
+    min-width: 100%;
+    height: 100%;
+    grid-area: l;
+    background-color: blue;
+    background-image: url("left.png");
+    background-size: cover;
+    overflow-x: hidden;
+}
+.right_side
+{
+    min-width: 100%;
+    height: 100%;
+    height: 1200px;
+    grid-area: r;
+    background-color: rgb(35, 124, 168);
+    background-image: url("right.png");
+    background-size: cover;
+    overflow-x: hidden;
+}
+.middle_top
+{
+    width: 70%;
+    height: 20vh;
+    grid-area: s;
+    .box
+    {
+        /* text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.5); */
+        /* position: absolute; */
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        /* border: 3px solid rgba(0, 0, 255, 0.7), 3px solid rgba(255, 217, 0, 0.7); */
+        border-radius: 30px;
+        background-color: rgba(128, 128, 128, 0.5);
+        box-shadow: 10px 10px 5px rgba(0, 0, 128, 0.5);
+
+    }
+
+    .search
+    {
+        flex : 4;
+        width: 320px;
+        border : none;
+        outline: none;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0);
+
+    }
+    .searchbutton
+    {
+        flex : 1;
+        background-position: center;
+        vertical-align: middle;
+        background-image: url("assets/magnify.svg");
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .searchbutton:hover
+    {
+
+        cursor: pointer;
+        scale: 1.2;
+        transition: 1s;
+    }
+    .searchbar
+    {
+        align-items: center; /* 수직 중앙 정렬 */
+        line-height: 50px;
+        text-align: center;
+        display: flex;
+    }
+
+    .searchtext
+    {
+        flex : 1;
+        font-size: large;
+    }
+    .searchform
+    {
+        flex: 3;
+        display: flex;
+    }
+}
+.middle
+{
+    width: 100%;
+    height: 70vh;
+    grid-area: t;
+    background-color: rgb(35, 24, 68);
+}
+.bottom
+{
+    width: 100vw;
+    height: 10vh;
+    grid-area: n;
+    background-color: rgb(135, 124, 168);
+}
+
+@media (max-width: 1500px) {
+    .left_side, .right_side {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "s s"
+            "t t"
+            "n n";
+    }
+
+    .middle
+    {
+        width : 1000px;
+    }
+    .middle_top
+    {
+        width: 50%;
+    }
+}
