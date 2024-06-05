@@ -1,3 +1,11 @@
+@font-face
+{
+    src: url("assets/NotoSansKR-VariableFont_wght.ttf");
+    font-family: "noto";
+}
+*{
+    font-family: "noto";
+}
 body, html {
     margin: 0;
     padding: 0;
@@ -157,6 +165,11 @@ table {
     overflow: hidden;
     overflow-y: scroll;
    
+   
+}
+table tr
+{
+    height: 32px;
 }
 table img{
     vertical-align: middle;
