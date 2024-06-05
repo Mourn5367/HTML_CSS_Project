@@ -3,7 +3,13 @@ body, html {
     padding: 0;
     height: 100%;
 }
-
+a{
+    text-decoration: none;
+}
+a:visited
+{
+    color:black;
+}
 /* 컨테이너의 기본 설정 */
 .container {
     margin: 0;
