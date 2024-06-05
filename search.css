@@ -199,17 +199,16 @@ input.check:checked + label
     content: url("assets/checkbox-outline.svg");
 }
 
-.delete
+.add_item
 {
     display: inline block;
     content: "";
-    border: 0px;
+    border: 2px solid black;
     width: 25px;
     height: 25px;
     background-size: cover;
-    background-image: url("assets/delete.png");
+    background-image: url("assets/plus.svg");
     background-color:  rgba(255, 255, 255, 0);
-    filter: invert(16%) sepia(89%) saturate(6054%) hue-rotate(358deg) brightness(97%) contrast(113%);
 }
 
 ::-webkit-scrollbar {
