@@ -1,27 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="sea1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sea1.css">
 </head>
 <body>
-  <div class="container">
-    <div class="left_side">left</div>
-    <div class="middle_top">
-      <div class = "box">
-      <section class = "searchbar">
-          <label class = "searchtext" for="search">검색</label>
-          <form class = "searchform" name="search" action="" method="get" autocomplete="on">            
-              <input class = "search" type="text" name="searchText" placeholder="아이템명을 입력해 주세요">                     
-              <input class = "searchbutton" type="submit" value=""> 
-          </form>
-      </section>
-  </div></div>
-    <div class="middle">middle</div>
-    <div class="right_side">right</div>
-    <div class="bottom">bottom</div>
-  </div>
+    <div class="container">
+        <div class="left_side"></div>
+        <div class="middle_top">
+            <div class="box">
+                <section class="searchbar">
+                    <label class="searchtext" for="search">검색</label>
+                    <form class="searchform" name="search" action="" method="get" autocomplete="on">            
+                        <input class="search" type="text" name="searchText" placeholder="아이템명을 입력해 주세요">                     
+                        <input class="searchbutton" type="submit" value=""> 
+                    </form>
+                </section>
+            </div>
+        </div>
+        <div class="middle">
+            <table>
+                <thead class="thead">
+                    <tr>
+                        <th>체크박스</th>
+                        <th>아이콘</th>
+                        <th>이름</th>
+                        <th>최근 매매 가격</th>
+                        <th>최저가</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CHECKBOX</td>
+                        <td>IMG</td>
+                        <td>NAME</td>
+                        <td>RECENTPRICE</td>
+                        <td>MINPRICE</td>
+                        <td>삭제 버튼</td>
+                    </tr>
+                    <tr>
+                      <td>CHECKBOX</td>
+                      <td>IMG</td>
+                      <td>NAME</td>
+                      <td>RECENTPRICE</td>
+                      <td>MINPRICE</td>
+                      <td>삭제 버튼</td>
+                    </tr>
+                    <tr>
+                      <td>CHECKBOX</td>
+                      <td>IMG</td>
+                      <td>NAME</td>
+                      <td>RECENTPRICE</td>
+                      <td>MINPRICE</td>
+                      <td>삭제 버튼</td>
+                  </tr>
+                  <tr>
+                    <td>CHECKBOX</td>
+                    <td>IMG</td>
+                    <td>NAME</td>
+                    <td>RECENTPRICE</td>
+                    <td>MINPRICE</td>
+                    <td>삭제 버튼</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="right_side"></div>
+        <div class="navbar">
+            <div class="item">
+                <img src="assets/home.svg" alt="">
+                <span>HOME</span>
+            </div>
+            <div class="item">
+                <img src="assets/magnify.svg" alt="">
+                <span>SEARCH</span>
+            </div>
+            <div class="item">
+                <img src="assets/account-circle.svg" alt="">
+                <span>LOG IN/OUT</span>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="assets/column_col.png" alt="neople"> 
+        </div>
+    </div>
 </body>
 </html>
