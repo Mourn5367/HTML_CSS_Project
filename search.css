@@ -11,6 +11,9 @@ body, html {
     padding: 0;
     height: 100%;
 }
+body {
+    overflow: hidden;
+}
 a{
     text-decoration: none;
 }
@@ -18,14 +21,14 @@ a:visited
 {
     color:black;
 }
-/* 컨테이너의 기본 설정 */
+
 .container {
     margin: 0;
     display: grid;
     height: 100%;
     width: 100%;
     grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas: 
         "l n n r"
         "l s s r"
@@ -33,7 +36,10 @@ a:visited
         "l w w r";
 }
 
-/* left_side 스타일 */
+.left_side, .right_side, .footer {
+    height: 100%;
+}
+
 .left_side {
     grid-area: l;
     background-color: blue;
@@ -43,7 +49,6 @@ a:visited
     height: 100%;
 }
 
-/* right_side 스타일 */
 .right_side {
     grid-area: r;
     background-color: rgb(35, 124, 168);
@@ -53,13 +58,11 @@ a:visited
     height: 100%;
 }
 
-/* middle_top 스타일 */
 .middle_top {
     grid-area: s;
     height: 20vh;
 }
 
-/* 중간 상자 스타일 */
 .middle_top .box {
     width: 50%;
     margin: auto;
@@ -70,7 +73,6 @@ a:visited
     box-shadow: 10px 10px 5px rgba(0, 0, 128, 0.5);
 }
 
-/* 검색 입력 스타일 */
 .search {
     flex: 4;
     width: 320px;
@@ -80,7 +82,6 @@ a:visited
     background-color: rgba(0, 0, 0, 0);
 }
 
-/* 검색 버튼 스타일 */
 .searchbutton {
     flex: 1;
     background-position: center;
@@ -99,7 +100,6 @@ a:visited
     transition: 1s;
 }
 
-/* 검색 바 스타일 */
 .searchbar {
     align-items: center;
     line-height: 50px;
@@ -107,27 +107,23 @@ a:visited
     display: flex;
 }
 
-/* 검색 텍스트 스타일 */
 .searchtext {
     flex: 1;
     font-size: large;
 }
 
-/* 검색 폼 스타일 */
 .searchform {
     flex: 3;
     display: flex;
 }
 
-/* middle 스타일 */
 .middle {
     grid-area: t;
     width: 100%;
-    height: 65vh;
-    overflow-y: scroll;
+    height: 100%;
+    overflow-y: auto;
 }
 
-/* 네비게이션 바 스타일 */
 .navbar {
     grid-area: n;
     width: 100%;
@@ -146,14 +142,12 @@ a:visited
 .item:hover {
     background-color: rgb(128, 128, 128);
 }
-/* 네비게이션 아이템 스타일 */
+
 .item {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* align-items: center;
-    justify-content: center; */
     text-align: center;
 }
 
@@ -169,7 +163,6 @@ a:visited
     font-size: 100%;
 }
 
-/* 푸터 스타일 */
 .footer {
     grid-area: w;
     width: 100%;
@@ -183,7 +176,6 @@ a:visited
     height: 100%;
 }
 
-/* 테이블 스타일 */
 table {
     width: 70%;
     min-width: 480px;
@@ -236,8 +228,8 @@ input.check + label
 {
     content: "";
     display: inline-block;
-    width: 30px; /* 원하는 너비 */
-    height: 30px; /* 원하는 높이 */
+    width: 30px; 
+    height: 30px; 
     background-image:url("assets/checkbox-blank.svg");
 }
 input.check:checked + label
@@ -282,7 +274,7 @@ input.check:checked + label
 
     .container {
         grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto 1fr auto;
         grid-template-areas: 
             "s"
             "t"
@@ -298,6 +290,7 @@ input.check:checked + label
 
     .middle_top, .middle, .navbar {
         width: 100%;
+        height: 100%;
     }
 
     .middle_top {
@@ -353,5 +346,10 @@ input.check:checked + label
     .searchtext {
         flex: 1;
         font-size: 14px;
+    }
+    .navbar {
+        width: 100%;
+        height: 65px;
+        display: flex;
     }
 }

@@ -3,13 +3,20 @@
     src: url("assets/NotoSansKR-VariableFont_wght.ttf");
     font-family: "noto";
 }
-*{
+*
+{
     font-family: "noto";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body, html {
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+}
+body {
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -18,22 +25,21 @@ a:visited
 {
     color:black;
 }
-/* 컨테이너의 기본 설정 */
 .container {
     margin: 0;
     display: grid;
     height: 100%;
     width: 100%;
     grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
         "l n n r"
-        "l s s r"
         "l t t r"
         "l w w r";
 }
-
-/* left_side 스타일 */
+.left_side, .right_side, .footer {
+    height: 100%;
+}
 .left_side {
     grid-area: l;
     background-color: blue;
@@ -43,7 +49,6 @@ a:visited
     height: 100%;
 }
 
-/* right_side 스타일 */
 .right_side {
     grid-area: r;
     background-color: rgb(35, 124, 168);
@@ -53,81 +58,12 @@ a:visited
     height: 100%;
 }
 
-/* middle_top 스타일 */
-.middle_top {
-    grid-area: s;
-    height: 20vh;
-}
-
-/* 중간 상자 스타일 */
-.middle_top .box {
-    width: 50%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 30px;
-    background-color: rgba(128, 128, 128, 0.5);
-    box-shadow: 10px 10px 5px rgba(0, 0, 128, 0.5);
-}
-
-/* 검색 입력 스타일 */
-.search {
-    flex: 4;
-    width: 320px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-/* 검색 버튼 스타일 */
-.searchbutton {
-    flex: 1;
-    background-position: center;
-    vertical-align: middle;
-    background-image: url("assets/magnify.svg");
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.searchbutton:hover {
-    cursor: pointer;
-    scale: 1.2;
-    transition: 1s;
-}
-
-/* 검색 바 스타일 */
-.searchbar {
-    align-items: center;
-    line-height: 50px;
-    text-align: center;
-    display: flex;
-}
-
-/* 검색 텍스트 스타일 */
-.searchtext {
-    flex: 1;
-    font-size: large;
-}
-
-/* 검색 폼 스타일 */
-.searchform {
-    flex: 3;
-    display: flex;
-}
-
-/* middle 스타일 */
 .middle {
+    height: 100%;
+    overflow-y: auto; 
     grid-area: t;
-    width: 100%;
-    height: 65vh;
-    overflow-y: scroll;
 }
 
-/* 네비게이션 바 스타일 */
 .navbar {
     grid-area: n;
     width: 100%;
@@ -145,14 +81,11 @@ a:visited
 .item:hover {
     background-color: rgb(128, 128, 128);
 }
-/* 네비게이션 아이템 스타일 */
 .item {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* align-items: center;
-    justify-content: center; */
     text-align: center;
 }
 
@@ -201,6 +134,7 @@ table img{
 }
 thead tr
 {
+    height: 32px;
     background-color: rgb(128, 128, 128, 0.5);
 }
 tbody tr:nth-child(even){
@@ -234,8 +168,8 @@ input.check + label
 {
     content: "";
     display: inline-block;
-    width: 30px; /* 원하는 너비 */
-    height: 30px; /* 원하는 높이 */
+    width: 30px; 
+    height: 30px; 
     background-image:url("assets/checkbox-blank.svg");
 }
 input.check:checked + label
@@ -257,7 +191,7 @@ input.check:checked + label
 }
 
 ::-webkit-scrollbar {
-    width: 13px;  /* 세로축 스크롤바 폭 너비 */
+    width: 13px; 
 }
 ::-webkit-scrollbar-thumb {
     background: rgb(221, 221, 221);/* 스크롤바 막대 색상 */
@@ -282,9 +216,8 @@ input.check:checked + label
 
     .container {
         grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: 1fr auto;
         grid-template-areas: 
-            "s"
             "t"
             "n";
         height: 100%;
@@ -296,64 +229,10 @@ input.check:checked + label
         display: none;
     }
 
-    .middle_top, .middle{
+    .middle{
         width: 100%;
     }
-
-    .middle_top {
-        grid-area: s;
-        height: 20vh;
-    }
     
-    .middle_top .box {
-        width: 50%;
-        margin: auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        border-radius: 30px;
-        background-color: rgba(128, 128, 128, 0.5);
-        box-shadow: 10px 10px 5px rgba(0, 0, 128, 0.5);
-    }
-    
-    .search {
-        flex: 4;
-        width: 10vw;
-        border: none;
-        outline: none;
-        font-size: 12px;
-        background-color: rgba(0, 0, 0, 0);
-    }
-    
-    .searchbutton {
-        flex: 1;
-        background-position: center;
-        vertical-align: middle;
-        background-image: url("assets/magnify.svg");
-        background-repeat: no-repeat;
-        width: 30px;
-        height: 30px;
-        border: none;
-        background-color: rgba(255, 255, 255, 0);
-        transition: 1s;
-    }
-    
-    .searchbutton:hover {
-        cursor: pointer;
-        scale: 1.3;
-        transition: 1s;
-    }
-    
-    .searchbar {
-        align-items: center;
-        line-height: 50px;
-        text-align: center;
-        display: flex;
-    }
-    
-    .searchtext {
-        flex: 1;
-        font-size: 14px;
-    }
     .navbar {
         width: 100%;
         height: 65px;
