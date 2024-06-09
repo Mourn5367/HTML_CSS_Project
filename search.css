@@ -135,9 +135,38 @@ a:visited
     background-color: rgba(128, 128, 128, 0.5);
     justify-content: center;
 }
+.navbar {
+    
+    grid-area: n;
+    width: 100%;
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.5);
+}
 
 .item:hover {
     background-color: rgb(128, 128, 128);
+}
+/* 네비게이션 아이템 스타일 */
+.item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+}
+
+.item img {
+    height: 30px;
+    background-position: center;
+}
+
+.item span {
+    font-family: "blade";
+    font-weight: bold;
+    margin-top: 7px;
+    font-size: 100%;
 }
 
 /* 푸터 스타일 */
@@ -164,8 +193,6 @@ table {
     border-collapse: collapse;
     overflow: hidden;
     overflow-y: scroll;
-   
-   
 }
 table tr
 {
@@ -246,28 +273,6 @@ input.check:checked + label
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(68, 68, 68, 0.5);
 }
-/* 네비게이션 아이템 스타일 */
-.item {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.item img {
-    height: 30px;
-    background-position: center;
-}
-
-.item span {
-    font-family: "blade";
-    font-weight: bold;
-    margin-top: 7px;
-    font-size: 100%;
-}
-
 /* 반응형 미디어 쿼리 */
 @media screen and (max-width: 1300px) {
 
