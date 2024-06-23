@@ -90,6 +90,7 @@ a:visited
     height: 30px;
     border: none;
     background-color: rgba(255, 255, 255, 0);
+    outline :none;
 }
 
 .searchbutton:hover {
@@ -130,7 +131,7 @@ a:visited
     justify-content: center;
 }
 .navbar {
-    
+    color: black;
     grid-area: n;
     width: 100%;
     display: flex;
@@ -147,6 +148,7 @@ a:visited
     flex-direction: column;
     width: 100%;
     text-align: center;
+    color: black;
 }
 
 .item img {
@@ -247,7 +249,52 @@ input.check:checked + label
     background-color:  rgba(255, 255, 255, 0);
     cursor: pointer;
 }
-
+.modal_container
+{
+    display: none;
+}
+.modal
+{
+   
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,0.5);  
+}
+.modal_page
+{
+    display: grid;
+    grid-template-areas: 
+        "t t t t "
+        "y y n n";
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+.modal_text
+{
+    grid-area: t;
+}
+.add_button_modal, .reject_button_modal
+{
+    width: 70%;
+    margin-top: 30px;
+    justify-self: center; /* 그리드 내 수평 중앙 정렬 */
+    align-self: center; /* 그리드 내 수직 중앙 정렬 */
+}
+.add_button_modal
+{
+    grid-area: y;
+}
+.reject_button_modal
+{
+    grid-area: n;
+}
 ::-webkit-scrollbar {
     width: 13px;  /* 세로축 스크롤바 폭 너비 */
 }
@@ -349,5 +396,6 @@ input.check:checked + label
         width: 100%;
         height: 65px;
         display: flex;
+        color: black;
     }
 }
