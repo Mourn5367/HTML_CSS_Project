@@ -187,6 +187,10 @@ input.check:checked + label
     filter: invert(16%) sepia(89%) saturate(6054%) hue-rotate(358deg) brightness(97%) contrast(113%);
 }
 
+.delete:hover
+{
+    cursor: pointer;
+}
 ::-webkit-scrollbar {
     width: 13px; 
 }
