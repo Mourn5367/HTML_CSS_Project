@@ -51,14 +51,14 @@ function closeModal() {
     modalContainer.style.display = "none"; // 모달 숨기기
 }
 
-// 추가하기 버튼 클릭 시 실행할 함수 (여기서는 예시로 alert를 띄웁니다)
+// 추가하기 버튼 클릭 시 실행할 함수
 function addItem() {
     // 중복 아이템 체크
     if (!savedItemIds.includes(tempItemid)) {
         savedItemIds.push(tempItemid); // 중복되지 않으면 배열에 추가
         console.log(savedItemIds);
 
-        // 쿠키에 저장 (예시로 7일 동안 유효한 쿠키로 설정)
+        // 쿠키에 저장
         document.cookie = `savedItemIds=${JSON.stringify(savedItemIds)}; max-age=${60 * 60 * 24 * 7}`;
     }
 
